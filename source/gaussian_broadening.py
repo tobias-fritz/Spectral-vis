@@ -19,7 +19,7 @@ def gaussian_broadening(energy , oscillator, sigma , x_var):
     
     returns: 
       spectrum : list of extinction values corrsponding to varaible / x-axis values
-    ''''
+    '''
     
     spectrum = []
     
