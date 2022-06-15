@@ -12,5 +12,5 @@ Computing and Visualising Absorption spectra from excitation energies.
 
 ## How to use
 
-- Since the application oppotunities for this script are rather broad an example usecase is given in the [example notebook](./example.ipynb).
+- Since the application opportunities for this script are rather broad an example usecase is given in the [example notebook](./example.ipynb).
 - A single excitation energy or a list of energies and their corresponding osc. strengths can be provided.
