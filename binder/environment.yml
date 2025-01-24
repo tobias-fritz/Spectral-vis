@@ -1,0 +1,12 @@
+name: spectral-vis
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - scipy
+  - pandas
+  - pip
+  - pip:
+    - -r requirements.txt

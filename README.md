@@ -43,7 +43,7 @@ oscilator_strength_1, wavelength_1, oscilator_strength_2, wavelength_2
 
 You can try the example notebook online using Binder:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tobias-fritz/Spectral-vis//HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tobias-fritz/Spectral-vis/HEAD)
 
 ## Setup
 
