@@ -69,6 +69,12 @@ class Spectrum:
         self.range_eV = None
         self.range_nm = None
 
+    def __repr__(self):
+        return f'Spectrum(fname={self.fname}, sigma={self.sigma})'
+    
+    def __str__(self):
+        return f'Spectrum object with data from {self.fname}'
+
     def calculate_spectrum(self, unit: str, 
                            range_eV: list = np.linspace(1, 5, num=1000, endpoint=True),
                            range_nm: list = np.linspace(200, 800, num=1000, endpoint=True), 
@@ -168,6 +174,11 @@ class Spectrum:
     def _nm_to_eV(self, wl_nm):
         '''Accepts energy in eV and returns wavelength'''
         return ((self.h * self.c) / (np.array(wl_nm) * self.J_eV)) * 10**9
+
+    @staticmethod
+    def help():
+        """Display the help information for the Spectrum class."""
+        help(Spectrum)
 
     @staticmethod
     def gaussian_broadening(energy: list, oscillator: list, sigma: float, x_var: list) -> list:
