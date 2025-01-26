@@ -8,5 +8,3 @@ dependencies:
   - scipy
   - pandas
   - pip
-  - pip:
-    - -r requirements.txt
