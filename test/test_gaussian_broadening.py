@@ -1,5 +1,5 @@
 import unittest
-from spectral_vis.gaussian_broadening import Spectrum
+from Spectral_vis.gaussian_broadening import Spectrum
 
 
 class TestSpectrum(unittest.TestCase):
@@ -18,29 +18,30 @@ class TestSpectrum(unittest.TestCase):
 '''
 
     def setUp(self):
-        self.sigma = 0.2
+        self.sigma_1 = 0.2
+        self.sigma_2 = 0.5
         self.fname = 'test_energy.csv'
         with open(self.fname, 'w') as f:
             f.write(self.TEST_CSV)
         self.spectrum = Spectrum(self.fname)
 
     def test_calculate_spectrum_eV(self):
-        self.spectrum.calculate_spectrum(unit='eV', sigma=self.sigma)
+        self.spectrum.calculate_spectrum(unit='eV', sigma=self.sigma_1)
         self.assertIsNotNone(self.spectrum.spectrum_eV)
         self.assertEqual(len(self.spectrum.spectrum_eV), 1000)
 
     def test_calculate_spectrum_nm(self):
-        self.spectrum.calculate_spectrum(unit='nm', sigma=self.sigma)
+        self.spectrum.calculate_spectrum(unit='nm', sigma=self.sigma_1)
         self.assertIsNotNone(self.spectrum.spectrum_nm)
         self.assertEqual(len(self.spectrum.spectrum_nm), 1000)
 
     def test_plot_spectrum_eV(self):
-        self.spectrum.calculate_spectrum(unit='eV', sigma=self.sigma)
+        self.spectrum.calculate_spectrum(unit='eV', sigma=self.sigma_1)
         self.spectrum.plot_spectrum(unit='eV')
         # No assertion, just ensure no exceptions are raised
 
     def test_plot_spectrum_nm(self):
-        self.spectrum.calculate_spectrum(unit='nm', sigma=self.sigma)
+        self.spectrum.calculate_spectrum(unit='nm', sigma=self.sigma_1)
         self.spectrum.plot_spectrum(unit='nm')
         # No assertion, just ensure no exceptions are raised
 
