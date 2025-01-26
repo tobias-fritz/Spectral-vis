@@ -1,5 +1,7 @@
 # Spectral-vis
 
+[![Tests](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package.yml/badge.svg)](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package.yml)
+
 Computing and Visualizing Absorption Spectra from Excitation Energies
 
 The procedure is based on [this article](http://gaussian.com/uvvisplot/) from the Gaussian website.
