@@ -1,5 +1,5 @@
 import unittest
-from spectral_vis.gaussian_broadening import Spectrum
+from src.gaussian_broadening import Spectrum
 
 
 class TestSpectrum(unittest.TestCase):
