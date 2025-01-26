@@ -1,5 +1,5 @@
 import unittest
-from source.gaussian_broadening import Spectrum
+from spectral_vis.gaussian_broadening import Spectrum
 
 
 class TestSpectrum(unittest.TestCase):
@@ -43,6 +43,10 @@ class TestSpectrum(unittest.TestCase):
         self.spectrum.calculate_spectrum(unit='nm', sigma=self.sigma)
         self.spectrum.plot_spectrum(unit='nm')
         # No assertion, just ensure no exceptions are raised
+
+    def tearDown(self):
+        import os
+        os.remove(self.fname)
 
 
 if __name__ == '__main__':

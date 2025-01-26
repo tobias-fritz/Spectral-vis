@@ -52,14 +52,14 @@ class Spectrum:
         self.fname = fname
         self.sigma = None
         
-        with open(fname, 'r') as f:
-            # read the csv file, skip the header
-            data = list(csv.reader(f))[1:]
-        # extract the data
-
-        # list of list containing all pairs of uneven columns
+        try:
+            with open(fname, 'r') as f:
+                # read the csv file, skip the header
+                data = list(csv.reader(f))[1:]
+        except FileNotFoundError:
+            raise FileNotFoundError(f'File {fname} not found.')
+        
         self.OSC = [list(map(float, row[::2])) for row in data]
-        # list of list containing all pairs of even columns
         self.E = [list(map(float, row[1::2])) for row in data]
         
         self.energy_unit = 'eV' if self.E[0][0] < 10 else 'nm'
