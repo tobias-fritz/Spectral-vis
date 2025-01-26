@@ -1,6 +1,6 @@
 # Spectral-vis
 
-[![Tests](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package.yml/badge.svg)](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package-conda.yml)
+[![Tests](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/tobias-fritz/Spectral-vis/actions/workflows/python-package-conda.yml)
 
 Computing and Visualizing Absorption Spectra from Excitation Energies
 
