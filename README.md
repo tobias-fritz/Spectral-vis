@@ -58,3 +58,7 @@ All dependencies can be installed using either pip or conda:
 conda install --file binder/environment.yml
 ```
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
